@@ -9,4 +9,4 @@ CREATE TABLE musicas (
     ano INT NOT NULL,
     imagem LONGBLOB NOT NULL
 
-)
+);
