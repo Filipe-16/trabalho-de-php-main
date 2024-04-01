@@ -34,12 +34,7 @@
         <button type="submit" class="btn btn-primary">Pesquisar</button>
     </form>
     <?php
-    $servidor = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "crud_musicas";
-
-    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+    $conn = mysqli_connect("localhost", "root", "", "crud_musicas");
 
     if(isset($_POST['pesquisar'])) {
         $pesquisar = $_POST['pesquisar'];
