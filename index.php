@@ -40,7 +40,7 @@
     if(isset($_POST['pesquisar'])) {
         $pesquisar = $_POST['pesquisar'];
 
-        $stmt = mysqli_prepare($conn, "SELECT * FROM musicas WHERE artista LIKE ? LIMIT 6");
+        $stmt = mysqli_prepare($conn, "SELECT * FROM musicas WHERE artista LIKE ? LIMIT 5");
 
         mysqli_stmt_bind_param($stmt, "s", $param_pesquisar);
         
