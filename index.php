@@ -34,6 +34,7 @@
         <button type="submit" class="btn btn-primary">Pesquisar</button>
     </form>
     <?php
+
     $conn = mysqli_connect("localhost", "root", "", "crud_musicas");
 
     if(isset($_POST['pesquisar'])) {
