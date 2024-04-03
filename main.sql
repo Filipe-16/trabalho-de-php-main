@@ -7,6 +7,6 @@ CREATE TABLE musicas (
     nome VARCHAR(100) NOT NULL,
     artista VARCHAR(100) NOT NULL,
     ano INT NOT NULL,
-    imagem LONGBLOB NOT NULL
+    imagem VARCHAR(255)
 
 );
