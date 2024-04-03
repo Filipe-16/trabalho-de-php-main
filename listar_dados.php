@@ -2,7 +2,7 @@
 
 echo "Banco De Dados";
 
-$conexao =  mysqli_connect("127.0.0.1", "root", "", "crud_musicas");
+$conexao = mysqli_connect("localhost", "root", "mysqluser", "crud_musicas");
 
 if (!empty($_POST['id_for_updating'])){
     $nome_edit = $_POST['nome_edit'];
