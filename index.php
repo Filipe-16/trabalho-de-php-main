@@ -35,7 +35,7 @@
     </form>
     <?php
 
-    $conn = mysqli_connect("localhost", "root", "", "crud_musicas");
+    $conexao = mysqli_connect("localhost", "root", "mysqluser", "crud_musicas");
 
     if(isset($_POST['pesquisar'])) {
         $pesquisar = $_POST['pesquisar'];
