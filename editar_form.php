@@ -29,7 +29,7 @@
 
         $id_da_musica = $_POST['id_for_editing'];
        
-        $conexao = mysqli_connect("127.0.0.1", "root", "", "crud_musicas");
+        $conexao = mysqli_connect("localhost", "root", "mysqluser", "crud_musicas");
         
         $query = "SELECT nome, artista, ano, imagem FROM musicas WHERE id=$id_da_musica";
       
