@@ -3,7 +3,7 @@
 $nome = $_POST['nome'];
 $artista = $_POST['artista'];
 $ano = $_POST['ano'];
-$conexao =  mysqli_connect("127.0.0.1", "root", "", "musica");
+$conexao = mysqli_connect("localhost", "root", "mysqluser", "crud_musicas");
 
 $targetDir = "uploads/"; 
 
