@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>CRUD de Músicas</h1>
-    <form action="inserir_dados.php" method="post">
+    <form action="inserir_dados.php" method="post" enctype="multipart/form-data">
         <label for="nome">Nome da Música:</label>
         <input type="text" name="nome" id="nome">
         <br><br>
