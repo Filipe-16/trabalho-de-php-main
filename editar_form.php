@@ -25,14 +25,18 @@
     <h1>Formulário para enviar dados</h1>
     <?php
     
+    // Verifica se o ID foi enviado via POST
     if(isset($_POST['id_for_editing'])) {
 
+        // Obtém o ID da música
         $id_da_musica = $_POST['id_for_editing'];
        
+        // Conecta o banco de dados
         $conexao = mysqli_connect("localhost", "root", "mysqluser", "crud_musicas");
         
         $query = "SELECT nome, artista, ano, imagem FROM musicas WHERE id=$id_da_musica";
       
+        // Executa a query SQL
         $resultado = mysqli_query($conexao, $query);
         
         if ($resultado && mysqli_num_rows($resultado) > 0) {
@@ -47,7 +51,7 @@
     }
 
     ?>
-    <form action="edit-data.php" method="post" enctype="multipart/form-data">
+    <form action="editar-data.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id_atualizacao" value="<?php echo $id_da_musica; ?>">
         <label>Nome:</label>
         <input type="text" name="nome_edit" value="<?php if(isset($linha)) echo $linha['nome']; ?>" required><br>
