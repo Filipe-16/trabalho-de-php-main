@@ -35,11 +35,15 @@
     </form>
     <?php
 
+    // Configurações do Banco de Dados
+
     $conexao = mysqli_connect("localhost", "root", "mysqluser", "crud_musicas");
 
+    // Verifica se o formulário de pesquisa foi submetido
     if(isset($_POST['pesquisar'])) {
         $pesquisar = $_POST['pesquisar'];
 
+        // Prepara a consulta SQL para buscar as músicas através do título
         $stmt = mysqli_prepare($conn, "SELECT * FROM musicas WHERE artista LIKE ? LIMIT 5");
 
         mysqli_stmt_bind_param($stmt, "s", $param_pesquisar);
@@ -50,6 +54,7 @@
         
         $resultado_das_musicas = mysqli_stmt_get_result($stmt);
         
+        // Loop para exibir os resultados de pesquisa
         while($row = mysqli_fetch_array($resultado_das_musicas)){
             echo "Nome da Música: ".$row['nome']."<br>";
             echo "Artista: ".$row['artista']."<br>";
